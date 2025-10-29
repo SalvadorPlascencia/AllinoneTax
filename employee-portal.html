@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Employee portal for All In One Tax & Permits team members to access schedules, submit time sheets, and stay informed.">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>Employee Portal | All In One Tax & Permits</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+  <style>
+    body {
+      background: #f8f9fe;
+    }
+
+    .card-portal {
+      border-radius: 1rem;
+    }
+
+    .timesheet-table th,
+    .timesheet-table td {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold text-primary" href="index.html">All In One Tax &amp; Permits</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupport">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Client Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact Operations</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-success" href="#timesheet">Submit Time Sheet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section section-shaped section-lg">
+    <div class="shape shape-style-1 bg-gradient-primary">
+      <span class="span-150"></span>
+      <span class="span-50"></span>
+      <span class="span-50"></span>
+      <span class="span-75"></span>
+      <span class="span-100"></span>
+      <span class="span-75"></span>
+      <span class="span-50"></span>
+      <span class="span-100"></span>
+      <span class="span-50"></span>
+      <span class="span-100"></span>
+    </div>
+    <div class="container py-lg">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card card-portal shadow-lg border-0">
+            <div class="card-body p-lg-5">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h2 class="text-primary">Team Access Center</h2>
+                  <p class="text-muted">Log time, review scheduling updates, and access internal resources in one secure place.</p>
+                  <ul class="list-unstyled mt-4">
+                    <li class="py-2 d-flex align-items-start">
+                      <div class="icon icon-shape bg-gradient-primary text-white rounded-circle mr-3">
+                        <i class="ni ni-key-25"></i>
+                      </div>
+                      <div>
+                        <span class="font-weight-bold d-block">Secure Login</span>
+                        <small>Two-factor authentication through our identity provider protects sensitive taxpayer data.</small>
+                      </div>
+                    </li>
+                    <li class="py-2 d-flex align-items-start">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle mr-3">
+                        <i class="ni ni-watch-time"></i>
+                      </div>
+                      <div>
+                        <span class="font-weight-bold d-block">Time &amp; Attendance</span>
+                        <small>Submit hours daily with automatic reminders for payroll deadlines.</small>
+                      </div>
+                    </li>
+                    <li class="py-2 d-flex align-items-start">
+                      <div class="icon icon-shape bg-gradient-success text-white rounded-circle mr-3">
+                        <i class="ni ni-folder-17"></i>
+                      </div>
+                      <div>
+                        <span class="font-weight-bold d-block">Resource Library</span>
+                        <small>Find SOPs, tax season updates, and compliance scripts for every service line.</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                  <div class="card shadow border-0">
+                    <div class="card-header bg-transparent pb-2">
+                      <h5 class="text-primary mb-0">Employee Login</h5>
+                      <small class="text-muted">Connect with your All In One tax account.</small>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="employeeEmail" class="font-weight-bold">Email</label>
+                          <input type="email" class="form-control" id="employeeEmail" placeholder="you@allinonetaxpermits.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="employeePassword" class="font-weight-bold">Password</label>
+                          <input type="password" class="form-control" id="employeePassword" placeholder="Password">
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                          <input type="checkbox" class="custom-control-input" id="rememberMe">
+                          <label class="custom-control-label" for="rememberMe">Remember me on this device</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        <div class="text-center mt-3">
+                          <a href="#" class="text-primary">Forgot password?</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="alert alert-default mt-4 mb-0" role="alert">
+                    <span class="alert-inner--icon"><i class="ni ni-lock-circle-open"></i></span>
+                    <span class="alert-inner--text"><strong>MFA Required:</strong> Complete Duo push verification after signing in.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-lg" id="timesheet">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-3">Weekly Time Sheet</h2>
+          <p class="lead text-muted">Submit your total billable and admin hours before Friday at 4:00 PM CST. Payroll runs every other Monday.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card shadow border-0 mb-5">
+            <div class="card-body p-4">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="timesheetName" class="font-weight-bold">Employee Name</label>
+                    <input type="text" class="form-control" id="timesheetName" placeholder="Full Name">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="timesheetWeek" class="font-weight-bold">Week Ending</label>
+                    <input type="date" class="form-control" id="timesheetWeek">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="timesheetManager" class="font-weight-bold">Manager</label>
+                    <select class="form-control" id="timesheetManager">
+                      <option selected>Choose...</option>
+                      <option>Salvador Plascencia</option>
+                      <option>Operations Desk</option>
+                      <option>Tax Team Lead</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-sm table-striped timesheet-table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Day</th>
+                        <th>Client / Project</th>
+                        <th>Billable Hours</th>
+                        <th>Admin Hours</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Monday</td>
+                        <td><input type="text" class="form-control" placeholder="e.g. 2024 1040 - Martinez"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                      </tr>
+                      <tr>
+                        <td>Tuesday</td>
+                        <td><input type="text" class="form-control" placeholder="e.g. Payroll Support"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                      </tr>
+                      <tr>
+                        <td>Wednesday</td>
+                        <td><input type="text" class="form-control" placeholder="e.g. Permit Research"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                      </tr>
+                      <tr>
+                        <td>Thursday</td>
+                        <td><input type="text" class="form-control" placeholder="e.g. Extension Filing"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                      </tr>
+                      <tr>
+                        <td>Friday</td>
+                        <td><input type="text" class="form-control" placeholder="e.g. Team Training"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                        <td><input type="number" class="form-control" min="0" step="0.25"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="form-group">
+                  <label for="timesheetNotes" class="font-weight-bold">Notes</label>
+                  <textarea class="form-control" id="timesheetNotes" rows="3" placeholder="Highlight PTO, rush projects, or follow-ups needed."></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit Time Sheet</button>
+                <span class="text-muted d-block mt-3"><small>Need help? Email payroll@allinonetaxpermits.com before submitting.</small></span>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow border-0 mb-4">
+            <div class="card-body">
+              <h5 class="text-primary">Quick Links</h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="py-2 d-flex align-items-start">
+                  <i class="ni ni-chat-round text-primary mr-3"></i>
+                  <div>
+                    <span class="font-weight-bold">Operations Slack</span><br>
+                    <small>#tax-season-updates</small>
+                  </div>
+                </li>
+                <li class="py-2 d-flex align-items-start">
+                  <i class="ni ni-folder-17 text-primary mr-3"></i>
+                  <div>
+                    <span class="font-weight-bold">Knowledge Base</span><br>
+                    <small>SharePoint &rarr; SOP Library &rarr; Current Tax Year</small>
+                  </div>
+                </li>
+                <li class="py-2 d-flex align-items-start">
+                  <i class="ni ni-send text-primary mr-3"></i>
+                  <div>
+                    <span class="font-weight-bold">Support Tickets</span><br>
+                    <small>operations@allinonetaxpermits.com</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card shadow border-0">
+            <div class="card-body">
+              <h5 class="text-primary">Upcoming Deadlines</h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="pb-3">
+                  <span class="badge badge-pill badge-primary mr-2">Jan 31</span>
+                  W-2 / 1099 delivery deadline
+                </li>
+                <li class="pb-3">
+                  <span class="badge badge-pill badge-primary mr-2">Mar 15</span>
+                  S-Corp &amp; Partnership returns due
+                </li>
+                <li>
+                  <span class="badge badge-pill badge-primary mr-2">Apr 15</span>
+                  Individual return deadline + Q1 estimates
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <a href="index.html" class="font-weight-bold text-primary">All In One Tax &amp; Permits</a>
+          <p class="text-muted mb-0">Internal portal for authorized team members.</p>
+        </div>
+        <div class="col-md-6 text-md-right mt-3 mt-md-0">
+          <a href="mailto:it@allinonetaxpermits.com" class="text-primary d-block">Need tech support? it@allinonetaxpermits.com</a>
+          <a href="index.html#contact" class="btn btn-sm btn-outline-primary mt-2">Back to Public Site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+</body>
+
+</html>
