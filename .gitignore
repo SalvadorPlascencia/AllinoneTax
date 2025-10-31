@@ -1,0 +1,43 @@
+# Dependency directories
+node_modules/
+bower_components/
+vendor/
+
+# Build artifacts and caches
+dist/
+build/
+.tmp/
+.cache/
+
+# Environment and secrets
+.env
+*.env
+backend/.env
+.env.*
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.csr
+*.p7*
+
+# Local configuration and logs
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Runtime data
+*.sqlite
+*.sqlite3
+.eslintcache
+
