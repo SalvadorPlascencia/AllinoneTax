@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Connect with All In One Tax &amp; Permits for expert tax preparation, permitting, and compliance support." />
+  <title>Contact | All In One Tax &amp; Permits</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="./assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, rgba(94, 114, 228, 0.9), rgba(23, 43, 77, 0.85)), url('./assets/img/theme/team-2-800x800.jpg') center/cover;
+      border-radius: 1rem;
+    }
+
+    .contact-hero h1,
+    .contact-hero p {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="contact-page" id="top">
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg bg-white navbar-light position-sticky top-0 shadow py-2">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5 font-weight-bold text-primary" href="index.html#top">
+        All In One Tax &amp; Permits
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="index.html#top" class="font-weight-bold text-primary">
+                All In One Tax
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#permits">Permits &amp; Licensing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#tax-tips">Tax Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#resources">Resources</a>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <a class="btn btn-sm btn-primary" href="employee-portal.html">
+              Employee Portal
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="section section-lg pt-6">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <div class="contact-hero px-4 py-5 px-lg-5 py-lg-6 shadow">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <h1 class="display-3 mb-3">Let’s Start the Conversation</h1>
+                  <p class="lead mb-0">Share a few details below and our team will reach out within one business day to schedule a consultation tailored to your tax and permitting needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="card shadow border-0">
+              <div class="card-body p-5">
+                <h5 class="text-primary text-uppercase font-weight-bold mb-4">Send a Message</h5>
+                <div id="contact-alert" class="alert d-none" role="alert"></div>
+                <form id="contact-form" novalidate>
+                  <div class="form-group">
+                    <label class="form-control-label" for="contact-name">Full Name</label>
+                    <input type="text" class="form-control" id="contact-name" name="name" placeholder="Jane Doe" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label" for="contact-email">Email Address</label>
+                    <input type="email" class="form-control" id="contact-email" name="email" placeholder="you@business.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label" for="contact-phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="(555) 123-4567" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label" for="contact-service">How can we help?</label>
+                    <select class="form-control" id="contact-service" name="serviceInterest">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="Personal Tax Preparation">Personal Tax Preparation</option>
+                      <option value="Business Tax Filing">Business Tax Filing</option>
+                      <option value="Permits &amp; Licensing">Permits &amp; Licensing</option>
+                      <option value="Payroll &amp; Compliance">Payroll &amp; Compliance</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-control-label" for="contact-message">Message</label>
+                    <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Share details about your request..." required></textarea>
+                  </div>
+                  <div class="form-group form-check mb-4">
+                    <input type="checkbox" class="form-check-input" id="contact-consent" required />
+                    <label class="form-check-label small" for="contact-consent">I authorize All In One Tax &amp; Permits to contact me about my inquiry.</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block" id="contact-submit-btn">Contact Us</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="card shadow border-0 mb-4">
+              <div class="card-body p-5">
+                <h5 class="text-primary text-uppercase font-weight-bold mb-4">Contact Details</h5>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-3">
+                    <div class="icon icon-shape bg-gradient-primary text-white rounded-circle mr-3">
+                      <i class="ni ni-pin-3"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Headquarters</h6>
+                      <p class="mb-0 text-muted">Serving clients across the U.S. with virtual and on-site appointments.</p>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start mb-3">
+                    <div class="icon icon-shape bg-gradient-success text-white rounded-circle mr-3">
+                      <i class="ni ni-mobile-button"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Phone</h6>
+                      <p class="mb-0 text-muted">Call or text: (619) 289-5393</p>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <div class="icon icon-shape bg-gradient-warning text-white rounded-circle mr-3">
+                      <i class="ni ni-email-83"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Email</h6>
+                      <p class="mb-0 text-muted">hello@allinonetaxpermits.com</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card shadow border-0">
+              <div class="card-body p-4">
+                <h6 class="text-uppercase text-primary mb-3">Hours</h6>
+                <p class="text-muted mb-2">Monday – Friday: 8:00 AM – 6:00 PM PT</p>
+                <p class="text-muted mb-0">Weekend appointments available upon request.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light py-3 mt-auto">
+    <div class="container">
+      <div class="row align-items-center gy-2">
+        <div class="col-md-4">
+          <div class="copyright small">
+            &copy; <span id="year"></span> All In One Tax &amp; Permits. All rights reserved.
+          </div>
+        </div>
+        <div class="col-md-8">
+          <nav class="d-flex flex-wrap justify-content-md-end gap-2 small">
+            <a href="index.html#top" class="nav-link px-2 text-light">Home</a>
+            <a href="index.html#permits" class="nav-link px-2 text-light">Permits &amp; Licensing</a>
+            <a href="index.html#tax-tips" class="nav-link px-2 text-light">Tax Insights</a>
+            <a href="index.html#services" class="nav-link px-2 text-light">Services</a>
+            <a href="index.html#process" class="nav-link px-2 text-light">Process</a>
+            <a href="index.html#resources" class="nav-link px-2 text-light">Resources</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      const alertBox = document.getElementById('contact-alert');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      if (!form || !alertBox || !submitBtn) {
+        return;
+      }
+
+      const showAlert = (type, message) => {
+        alertBox.className = `alert alert-${type} mb-4`;
+        alertBox.textContent = message;
+      };
+
+      const hideAlert = () => {
+        alertBox.className = 'alert d-none';
+        alertBox.textContent = '';
+      };
+
+      const setSubmitting = (isSubmitting) => {
+        submitBtn.disabled = isSubmitting;
+        submitBtn.textContent = isSubmitting ? 'Sending...' : 'Contact Us';
+      };
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        hideAlert();
+
+        if (!form.reportValidity()) {
+          return;
+        }
+
+        setSubmitting(true);
+
+        const formData = new FormData(form);
+        const payload = {
+          name: formData.get('name')?.trim(),
+          email: formData.get('email')?.trim(),
+          phone: formData.get('phone')?.trim(),
+          serviceInterest: formData.get('serviceInterest') || '',
+          message: formData.get('message')?.trim(),
+        };
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const body = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            throw new Error(body.error || 'Unable to send your message right now.');
+          }
+
+          form.reset();
+          const serviceSelect = form.querySelector('[name="serviceInterest"]');
+          if (serviceSelect) {
+            serviceSelect.selectedIndex = 0;
+          }
+          showAlert('success', 'Thanks! Your message is on its way. We\'ll respond within one business day.');
+        } catch (error) {
+          showAlert('danger', error.message || 'We ran into an unexpected issue. Please try again later.');
+        } finally {
+          setSubmitting(false);
+        }
+      });
+    });
+  </script>
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

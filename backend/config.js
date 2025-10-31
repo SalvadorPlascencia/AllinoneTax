@@ -24,10 +24,27 @@ const requiredFile = (label, filePath) => {
   return resolved;
 };
 
+const parseBoolean = (value, defaultValue = false) => {
+  if (value === undefined) return defaultValue;
+  return ['true', '1', 'yes', 'on'].includes(String(value).toLowerCase());
+};
+
 export const config = {
   env: process.env.NODE_ENV ?? 'development',
   port: process.env.PORT ?? 4000,
   clientOrigin: process.env.CLIENT_ORIGIN,
+  contact: {
+    toAddress: process.env.CONTACT_EMAIL_TO,
+    fromAddress: process.env.CONTACT_EMAIL_FROM ?? process.env.CONTACT_EMAIL_TO,
+    subjectPrefix: process.env.CONTACT_EMAIL_SUBJECT_PREFIX ?? '[Contact]',
+    smtp: {
+      host: process.env.CONTACT_SMTP_HOST,
+      port: process.env.CONTACT_SMTP_PORT ? Number(process.env.CONTACT_SMTP_PORT) : undefined,
+      secure: parseBoolean(process.env.CONTACT_SMTP_SECURE),
+      user: process.env.CONTACT_SMTP_USER,
+      pass: process.env.CONTACT_SMTP_PASS,
+    },
+  },
   irs: {
     mefEndpoint: process.env.IRS_MEF_ENDPOINT,
     transmitterEfin: process.env.IRS_MEF_TRANSMITTER_EFIN,
@@ -75,4 +92,23 @@ export const createIrsHttpsAgent = () => {
     rejectUnauthorized: true,
     keepAlive: true,
   });
+};
+
+export const verifyContactConfig = () => {
+  const missing = [];
+  if (!config.contact?.toAddress) missing.push('CONTACT_EMAIL_TO');
+  if (!config.contact?.smtp?.host) missing.push('CONTACT_SMTP_HOST');
+  if (!config.contact?.smtp?.port) missing.push('CONTACT_SMTP_PORT');
+  if (!config.contact?.smtp?.user) missing.push('CONTACT_SMTP_USER');
+  if (!config.contact?.smtp?.pass) missing.push('CONTACT_SMTP_PASS');
+  if (missing.length) {
+    throw new Error(`Missing contact email configuration values: ${missing.join(', ')}`);
+  }
+  return {
+    ...config.contact,
+    smtp: {
+      ...config.contact.smtp,
+      port: Number(config.contact.smtp.port),
+    },
+  };
 };

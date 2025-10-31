@@ -6,6 +6,7 @@ import { config } from './config.js';
 import { submitReturn, getAcknowledgement } from './services/irsMefClient.js';
 import { requestTranscript } from './services/irsTdsClient.js';
 import { maskValue } from './utils/xml.js';
+import { sendContactEmail } from './services/contactMailer.js';
 
 const app = express();
 
@@ -33,6 +34,48 @@ const buildErrorPayload = (error) => {
 
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok', env: config.env });
+});
+
+const sanitizeField = (value, maxLength) => {
+  if (typeof value !== 'string') return '';
+  return value.trim().slice(0, maxLength);
+};
+
+const isEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+app.post('/api/contact', async (req, res) => {
+  const name = sanitizeField(req.body.name, 120);
+  const email = sanitizeField(req.body.email, 254);
+  const phone = sanitizeField(req.body.phone ?? '', 50);
+  const serviceInterest = sanitizeField(req.body.serviceInterest ?? '', 120);
+  const message = sanitizeField(req.body.message, 2000);
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'Name, email, and message are required.' });
+  }
+  if (!isEmail(email)) {
+    return res.status(400).json({ error: 'Provide a valid email address.' });
+  }
+
+  try {
+    await sendContactEmail({
+      name,
+      email,
+      phone,
+      serviceInterest,
+      message,
+      metadata: {
+        ip: req.ip,
+        userAgent: req.get('user-agent'),
+      },
+    });
+    res.json({ success: true });
+  } catch (error) {
+    console.error('[Contact:Send]', error);
+    res.status(500).json({
+      error: 'Failed to send your message. Please try again later.',
+    });
+  }
 });
 
 app.post('/api/mef/returns', async (req, res) => {
